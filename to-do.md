@@ -1,0 +1,4 @@
+- Set up for mobile (hamburger)
+- Add content
+- Add LSE logo
+- Add animations
