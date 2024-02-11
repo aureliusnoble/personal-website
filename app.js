@@ -404,6 +404,17 @@ document.addEventListener('DOMContentLoaded', () => {
           <a href="link-to-paper-3" class="cv-link">Paper</a>
         </div>
       </div>
+      <hr>
+      <div class="research-item">
+        <div class="research-img">
+          <img src="research-img-3.jpeg" alt="Research Image 3">
+        </div>
+        <div class="research-content">
+          <h3><a href="link-to-paper-3" class="paper-link">Sub-title 3</a></h3>
+          <p>Description of the research interest 3. This study investigates...</p>
+          <a href="link-to-paper-3" class="cv-link">Paper</a>
+        </div>
+      </div>
     </section>`,
     workshops: `
     <section class="workshops-section">
