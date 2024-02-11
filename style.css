@@ -23,6 +23,7 @@ header,
 footer {
   position: relative;
   z-index: 2; /* Ensure these are above the canvas */
+  pointer-events: auto;
 }
 
 header {
@@ -100,13 +101,18 @@ nav a:hover {
 }
 
 footer {
-  text-align: right; /* Align text to the right */
-  padding: 0px 20px; /* Padding for spacing */
+  text-align: right; /* Align text to the right, may not be necessary with flexbox alignment */
   position: fixed; /* Fixed position */
   bottom: 0;
-  right: 0;
-  width: auto; /* Adjust width as needed */
+  left: 0; /* Adjusted to left:0 to ensure it spans from the left edge */
+  right: 0; /* Ensure it extends to the right edge */
   background-color: transparent; /* Optional: Set a background color */
+  display: flex;
+  align-items: flex-end; /* Align items at the bottom */
+  justify-content: space-between; /* Push the logo to the left and text to the right */
+  padding: 10px 10px; /* Add padding for spacing inside the footer */
+  width: auto; /* Adjust width to auto to span the full width without specifying percentage */
+  box-sizing: border-box; /* Ensures padding is included in the height calculation */
 }
 
 main {
@@ -354,27 +360,31 @@ main {
 .research-section {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Space between items */
+  gap: 40px; /* Space between items */
   font-family: 'Times New Roman', serif; /* Sets the font for the section */
 }
 
 .research-item {
-  display: flex;
-  align-items: center; /* Align items vertically */
-  gap: 20px; /* Space between image and text */
+  display: grid;
+  grid-template-columns: auto 1fr; /* Adjust grid layout */
+  gap: 20px; /* Adjust gap between image and content */
+  align-items: start; /* Align items to the start to prevent stretching */
 }
 
 .research-img img {
-  width: 400px; /* Adjust based on your needs */
-  height: 300px; /* Adjust to maintain aspect ratio */
-  object-fit: contain; /* Cover the area, may crop the image */
-  border-radius: 10px; /* Adds rounded corners to the image */
+  width: 100%; /* Responsive width */
+  max-width: 400px; /* Limit maximum width */
+  object-fit: contain; /* Ensure the image fits without being cropped */
+  border-radius: 10px;
 }
 
 .research-content {
-  flex-grow: 1;
-}
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  gap: 10px; /* Space between text and button */
 
+  align-items: flex-start; /* Align items to the start, adjust as needed */
+}
 .research-content h3 {
   margin: 0;
   padding: 10px; /* Adds padding to make it look like a block */
@@ -438,4 +448,14 @@ hr {
     rgba(0, 0, 0, 0)
   ); /* Gradient line */
   margin: 20px 0; /* Adds space around the <hr> */
+}
+
+.footer-image {
+  /* Adjust the size as needed while maintaining aspect ratio */
+  width: 50px; /* Example size, adjust as needed */
+  height: auto;
+}
+
+p {
+  margin: 0; /* Remove default margin to prevent unnecessary spacing */
 }

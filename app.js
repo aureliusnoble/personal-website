@@ -34,9 +34,20 @@ let canvasOffset = getCanvasOffset();
 
 // Update mouse coordinates with respect to canvas position
 canvas.addEventListener('mousemove', function (event) {
-  canvasOffset = getCanvasOffset(); // Update offset on each mouse move
-  mouse.x = event.clientX - canvasOffset.x;
-  mouse.y = event.clientY - canvasOffset.y;
+  // Update canvasOffset on each mouse move
+  const canvasOffset = getCanvasOffset();
+  const mouseX = event.clientX - canvasOffset.x;
+  const mouseY = event.clientY - canvasOffset.y;
+
+  // Only update global mouse position if not over interactive elements
+  if (!isMouseOverInteractiveElements(mouseX, mouseY)) {
+    mouse.x = mouseX;
+    mouse.y = mouseY;
+  } else {
+    // Optional: reset mouse coordinates or handle differently
+    mouse.x = undefined;
+    mouse.y = undefined;
+  }
 });
 
 // Update canvas offset on resize
@@ -481,6 +492,50 @@ document.addEventListener('DOMContentLoaded', () => {
     updateContent('home');
   }
 });
+
+function isMouseOverInteractiveElements(mouseX, mouseY) {
+  // List all selectors for elements you want to ensure are clickable
+  const selectors = ['header', 'main', '#pageContent', 'nav', 'footer'];
+
+  return selectors.some((selector) => {
+    const element = document.querySelector(selector);
+    if (!element) return false;
+
+    const rect = element.getBoundingClientRect();
+    return (
+      mouseX >= rect.left &&
+      mouseX <= rect.right &&
+      mouseY >= rect.top &&
+      mouseY <= rect.bottom
+    );
+  });
+}
+
+document
+  .querySelector('footer')
+  .addEventListener('mousemove', simulateCanvasInteraction);
+
+document
+  .querySelector('header')
+  .addEventListener('mousemove', simulateCanvasInteraction);
+document
+  .getElementById('pageContent')
+  .addEventListener('mousemove', simulateCanvasInteraction);
+
+function simulateCanvasInteraction(event) {
+  // Calculate the mouse position relative to the canvas
+  const canvasBounds = canvas.getBoundingClientRect();
+  const mouseX = event.clientX - canvasBounds.left;
+  const mouseY = event.clientY - canvasBounds.top;
+
+  // Directly simulate interaction with the particle system here
+  // For example, updating the 'mouse' object used by your particle system
+  mouse.x = mouseX;
+  mouse.y = mouseY;
+
+  // Optionally, trigger any specific interaction logic for the particle system
+  // This could be a function that checks for proximity to particles, etc.
+}
 
 // Animation loop
 function animate() {
