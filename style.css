@@ -152,18 +152,16 @@ main {
 
 .dropdown:hover .dropdown-content {
   display: block;
-  animation: slideIn 0.3s ease-out; /* Smooth slide-in effect */
+  animation: fadeIn 0.3s ease-out; /* Updated to use fadeIn for opacity transition */
 }
 
-/* Keyframes for slide-in animation */
-@keyframes slideIn {
+/* Updated keyframes for fadeIn animation */
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -578,6 +576,10 @@ p {
     right: 0; /* Slide in */
   }
 
+  nav a {
+    color: white;
+  }
+
   nav ul {
     flex-direction: column;
     align-items: flex-start;
@@ -608,7 +610,7 @@ p {
   .dropdown-content a {
     padding-left: 30px; /* Indent dropdown links for hierarchy */
     font-size: 22px; /* Slightly smaller than top-level links */
-    color: #ddd; /* Lighter color for differentiation */
+    color: white; /* Lighter color for differentiation */
   }
 
   .dropdown > a::after {
