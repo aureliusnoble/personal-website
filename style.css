@@ -199,3 +199,47 @@ main {
         max-width: none;
     }
 }
+
+.workshops-section {
+    padding: 20px;
+}
+
+.workshops-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap into the next line */
+    gap: 20px; /* Space between workshop items */
+}
+
+.workshop-item {
+    flex: 1; /* Allows items to grow and fill the space */
+    max-width: calc(50% - 20px); /* Adjusts for gap to maintain two-column layout */
+    text-align: center; /* Centers the content */
+}
+
+.workshop-item img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 400px; /* Maximum size of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and title */
+}
+
+.workshop-title {
+    display: block; /* Ensures the link takes up the full width for easier clicking */
+    margin-bottom: 10px; /* Space between title and description */
+    color: #007bff; /* Example link color */
+    text-decoration: none; /* Removes underline */
+}
+
+.workshop-title:hover {
+    text-decoration: underline; /* Adds underline on hover for visual feedback */
+}
+
+@media (max-width: 768px) {
+    .workshops-container {
+        flex-direction: column; /* Stacks items vertically on smaller screens */
+    }
+
+    .workshop-item {
+        max-width: 100%; /* Allows items to fill the container on smaller screens */
+    }
+}

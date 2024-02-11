@@ -322,7 +322,24 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </section>`,
         inprogress: `<section><h2>Research</h2><p>Overview of research interests.</p></section>`,
-        workshops: `<section><h2>Workshops</h2><p>Upcoming workshops.</p></section>`,
+    workshops: `
+    <section class="workshops-section">
+        <h2>Workshops</h2>
+        <div class="workshops-container">
+            <div class="workshop-item">
+                <a href="LINK_TO_WORKSHOP_1" target="_blank"><img src="IMAGE_SRC_1" alt="Workshop 1 Image"></a>
+                <a href="LINK_TO_WORKSHOP_1" target="_blank" class="workshop-title">Workshop Title 1</a>
+                <p>Some description about Workshop 1...</p>
+            </div>
+            <div class="workshop-item">
+                <a href="LINK_TO_WORKSHOP_2" target="_blank"><img src="IMAGE_SRC_2" alt="Workshop 2 Image"></a>
+                <a href="LINK_TO_WORKSHOP_2" target="_blank" class="workshop-title">Workshop Title 2</a>
+                <p>Some description about Workshop 2...</p>
+            </div>
+            <!-- Repeat for more workshops -->
+        </div>
+    </section>`,
+
         contact: `<section><h2>Contact</h2><p>Contact information.</p></section>`
     };
 
