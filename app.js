@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
     about: `
     <section class="about-section">
         <div class="about-img">
-            <img src="headshot.jpeg" alt="Headshot">
+            <img src="headshot2.png" alt="Headshot">
         </div>
         <div class="about-text">
             <p>I am a PhD candidate in Economic History at the London School of Economics, supervised by Olivier Accominotti and Neil Cummins.<br><br>
