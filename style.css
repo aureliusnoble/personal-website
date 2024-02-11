@@ -145,3 +145,13 @@ main {
     }
 }
 
+#pageContent {
+    background-color: rgba(235, 235, 235, 0.5); /* Grey translucent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    max-width: 70%; /* Adjust based on your preference */
+    margin: 20px auto; /* Horizontally centers the window */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for the opacity */
+    opacity: 0; /* Start with the element invisible for animation */
+}

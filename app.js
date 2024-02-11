@@ -306,7 +306,6 @@ function updateSimulation() {
         particle.update();
     });
 }
-
 document.addEventListener('DOMContentLoaded', () => {
     const pages = {
         home: `<section><h2>Welcome Home</h2><p>This is the homepage content.</p></section>`,
@@ -332,18 +331,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    function updateContent(pageName, pushToHistory = false) {
-        console.log(`Updating content for: ${pageName}, pushToHistory: ${pushToHistory}`);
-        if(pages[pageName]) {
+function updateContent(pageName, pushToHistory = false) {
+    console.log(`Updating content for: ${pageName}, pushToHistory: ${pushToHistory}`);
+    
+    // Check if the requested page is 'home'
+    if(pageName === 'home') {
+        // Clear the content for the homepage
+        pageContent.style.opacity = 0;
+        
+        // Optionally, remove the content after the fade-out animation
+        setTimeout(() => {
+            pageContent.innerHTML = ''; // Clears the inner content for the homepage
+        }, 500); // Match the duration with the CSS transition
+        
+        // Update the browser's history state if required
+        if (pushToHistory) {
+            window.history.pushState({page: 'home', timestamp: new Date().getTime()}, "", '#home');
+            console.log(`Pushed to history: home`);
+        }
+    } else if(pages[pageName]) {
+        // Handle other pages as before
+        pageContent.style.opacity = 0;
+
+        setTimeout(() => {
             pageContent.innerHTML = pages[pageName];
+            pageContent.style.opacity = 1;
+
             if (pushToHistory) {
                 window.history.pushState({page: pageName, timestamp: new Date().getTime()}, "", `#${pageName}`);
                 console.log(`Pushed to history: ${pageName}`);
             }
-        } else {
-            console.log("No content found for:", pageName);
-        }
+        }, 500); // This should match the duration of the CSS transition
+    } else {
+        console.log("No content found for:", pageName);
     }
+}
 
     window.addEventListener('popstate', function(event) {
         console.log("Popstate event triggered", event.state);
@@ -368,6 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateContent('home');
     }
 });
+
 
 
 // Animation loop
