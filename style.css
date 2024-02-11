@@ -163,6 +163,8 @@ main {
     gap: 20px; /* Adds some space between the image and text */
     padding: 20px;
     /* No max-width here to allow it to fill the parent container */
+    font-family: 'Georgia', serif; /* Example serif font */
+    font-size: 20px; /* Larger font size for the about section */
 }
 
 .about-img img {

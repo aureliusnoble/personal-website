@@ -315,8 +315,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="headshot.jpeg" alt="Headshot">
         </div>
         <div class="about-text">
-            <h2>About Us</h2>
-            <p>This is about Aurelius Noble.</p>
+            <p>I am a PhD candidate in Economic History at the London School of Economics, supervised by Olivier Accominotti and Neil Cummins.
+            
+            My research looks at long-run wealth inequality, and the persistence of aristocratic elites, with a focus on 'Big Data' collection methods and network analysis.
+            </p>
         </div>
     </section>`,
         research: `<section><h2>Research</h2><p>Overview of research interests.</p></section>`,
