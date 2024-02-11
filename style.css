@@ -171,7 +171,7 @@ main {
   overflow-x: hidden; /* Prevents horizontal scroll */
   overflow-y: auto; /* Enables vertical scroll when needed */
   max-height: calc(100vh - 120px);
-  background-color: rgba(230, 230, 230, 0.5); /* Grey translucent background */
+  background-color: rgba(240, 240, 240, 0.7); /* Grey translucent background */
   border-radius: 10px; /* Rounded corners */
   padding: 20px;
   max-width: 1000px; /* Adjusted to make the window narrower */
@@ -201,21 +201,10 @@ main {
   /* Or use a fixed max-width in pixels if preferred, e.g., max-width: 600px; */
 }
 
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-  }
-
-  .about-img,
-  .about-text {
-    max-width: 100%;
-    text-align: center; /* Center the text for smaller screens */
-  }
-
-  .about-text {
-    /* Reset max-width for mobile to allow text to fill the container */
-    max-width: none;
-  }
+.hamburger-menu {
+  display: none; /* Hide by default */
+  font-size: 30px; /* Adjust size as needed */
+  cursor: pointer;
 }
 
 .workshops-section {
@@ -395,6 +384,7 @@ main {
 
 .research-content h3 a {
   color: #000; /* Default text color */
+  font-size: 20px;
   text-decoration: none; /* Removes underline */
 }
 .research-content h3:hover,
@@ -406,6 +396,10 @@ main {
   color: #000; /* Initial color for the subtitle */
   text-decoration: none; /* Removes underline */
   transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.research-content p {
+  font-size: 18px;
 }
 
 /* Hover effect for the subtitle link */
@@ -458,4 +452,179 @@ hr {
 
 p {
   margin: 0; /* Remove default margin to prevent unnecessary spacing */
+}
+@media (max-width: 1024px) {
+  .hamburger-menu {
+    display: block; /* Show hamburger on smaller screens */
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    top: 20px; /* Adjust as needed */
+    z-index: 5; /* Ensure it's above other content */
+  }
+  .header-content h1 {
+    font-size: 32px; /* Significantly smaller size for mobile */
+    margin-bottom: 0px; /* Example adjustment */
+  }
+
+  .header-content p {
+    font-size: 18px; /* Smaller size for subtitle on mobile */
+    margin-top: 0; /* Example adjustment */
+  }
+
+  .about-section h2,
+  .about-section h3,
+  .about-section p {
+    font-size: 18px; /* Smaller font size for readability on mobile */
+    margin: 10px 0; /* Adjust spacing as needed */
+  }
+
+  .about-img img {
+    width: 50%; /* Adjust width to fit mobile screens better */
+    max-width: 300px; /* Optional: limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+  }
+  .about-img {
+    text-align: center; /* Centers the content */
+    width: 100%; /* Use the full width to center content effectively */
+  }
+
+  .about-section {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align the content */
+    gap: 20px; /* Adjust spacing between elements */
+    padding: 20px; /* Increase padding for better spacing on small screens */
+  }
+
+  .about-text {
+    text-align: left; /* Center-align text for a cohesive look on mobile */
+    padding: 0 11px; /* Add padding to ensure text doesn't touch the edges */
+    max-width: 100%; /* Allow text blocks to fill the available width */
+  }
+  .research-header {
+    font-size: 18px; /* Ensuring it matches other items */
+    color: white; /* Ensuring it's white like other navigation links */
+  }
+  nav {
+    text-align: left;
+  }
+  .contact-section {
+    padding: 20px 10px; /* Adjust padding for smaller screens */
+    text-align: center; /* Ensure text is centered */
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Reduce gap for a tighter layout */
+  }
+
+  .contact-info a {
+    font-size: 18px; /* Smaller font size for better readability on mobile */
+    padding: 8px; /* Adjust padding for touch targets */
+  }
+
+  .contact-icon {
+    width: 30px; /* Adjust icon size for mobile */
+    height: auto;
+  }
+
+  .research-item {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align the items */
+    text-align: left; /* Ensure text is centered */
+    gap: 10px; /* Space between elements */
+  }
+
+  .research-img img {
+    width: 100%; /* Responsive and scale based on its container's width */
+    max-width: 300px; /* Optionally, limit the image's maximum width */
+    height: auto; /* Maintain the image's aspect ratio */
+  }
+
+  .research-content {
+    width: 100%; /* Full width to match the parent's width */
+  }
+
+  .research-content h3,
+  .research-content p,
+  .research-content .cv-link {
+    font-size: 18px; /* Adjusted for readability and accessibility */
+    padding: 8px 0; /* Padding adjustment */
+  }
+
+  .research-content .cv-link {
+    font-size: 16px; /* Slightly smaller font size for links */
+    margin-top: 10px; /* Additional space above links */
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    height: 100%;
+    width: 250px; /* Adjust width of the sidebar */
+    background-color: #333; /* Dark grey background */
+    transition: right 0.3s ease; /* Smooth slide-in effect */
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px; /* Space for the close icon */
+  }
+
+  nav.active {
+    right: 0; /* Slide in */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li,
+  .dropdown-content li {
+    padding: 10px 20px; /* Adjusted padding */
+  }
+
+  nav ul li.dropdown >,
+  nav ul li {
+    color: white; /* Text color consistency */
+    font-size: 18px; /* Matching font size with other nav items */
+    padding: 0px 0px; /* Consistent padding */
+    text-decoration: none; /* Removing underline */
+    display: block; /* Full width for easier touch */
+  }
+
+  .dropdown-content {
+    display: block; /* Always show dropdown content for mobile */
+    position: static; /* Normal flow */
+    width: 100%; /* Full width */
+    box-shadow: none; /* Removing box shadow for a flat design */
+    background-color: #333; /* Matching nav background color */
+  }
+
+  .dropdown-content a {
+    padding-left: 30px; /* Indent dropdown links for hierarchy */
+    font-size: 22px; /* Slightly smaller than top-level links */
+    color: #ddd; /* Lighter color for differentiation */
+  }
+
+  .dropdown > a::after {
+    content: none; /* Hides dropdown arrows or indicators */
+  }
+
+  footer {
+    display: none; /* Hide footer on mobile devices */
+  }
+}
+
+@keyframes slideIn {
+  from {
+    right: -250px; /* Start off-screen */
+  }
+  to {
+    right: 0; /* Slide in */
+  }
 }

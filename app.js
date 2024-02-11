@@ -323,6 +323,24 @@ function updateSimulation() {
   });
 }
 document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger-menu');
+  const nav = document.querySelector('nav');
+  const navLinks = nav.querySelectorAll('a'); // Select all links within nav
+
+  hamburger.addEventListener('click', function () {
+    nav.classList.toggle('active');
+  });
+
+  // Add click event to each link
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      // If nav is active, toggle off when any link is clicked
+      if (nav.classList.contains('active')) {
+        nav.classList.toggle('active');
+      }
+    });
+  });
+
   const pages = {
     home: `<section><h2>Welcome Home</h2><p>This is the homepage content.</p></section>`,
     about: `
