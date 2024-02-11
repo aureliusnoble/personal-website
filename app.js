@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="headshot.jpeg" alt="Headshot">
         </div>
         <div class="about-text">
-            <p>I am a PhD candidate in Economic History at the London School of Economics, supervised by Olivier Accominotti and Neil Cummins.
+            <p>I am a PhD candidate in Economic History at the London School of Economics, supervised by Olivier Accominotti and Neil Cummins.<br><br>
             
             My research looks at long-run wealth inequality, and the persistence of aristocratic elites, with a focus on 'Big Data' collection methods and network analysis.
             </p>
