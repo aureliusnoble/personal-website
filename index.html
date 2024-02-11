@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aurelius Noble</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Favicon link -->
-    <link rel="icon" type="image/png" href="favicon.png">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
     <canvas id="simulationCanvas"></canvas>
     <div class="content">
-        <header>
-            <div class="header-content">
-                <h1>Aurelius Noble</h1>
-                <p>Historical Data Scientist</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home" id="home">Home</a></li>
-                    <li><a href="#about" id="about">About</a></li>
-
-                    <li class="dropdown" id="research" >Research
-                    
-                        <ul class="dropdown-content">
-                            <li><a href="#inprogress" id="inprogress">In Progress</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#workshops" id="workshops">Workshops</a></li>
-                    <li><a href="#contact" id="contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main id="pageContent">
-            <!-- Dynamic content will be loaded here -->
-        </main>
-        <footer>
-            <p>© Aurelius Noble</p>
-        </footer>
+      <header>
+        <!-- Make the header content clickable and link to '#home' -->
+        <a href="#home" class="header-link">
+          <div class="header-content">
+            <h1>Aurelius Noble</h1>
+            <p>Historical Data Scientist</p>
+          </div>
+        </a>
+        <nav>
+          <ul>
+            <!-- Removed 'Home' list item -->
+            <li><a href="#about" id="about">About</a></li>
+            <li class="dropdown" id="research">
+              Research
+              <ul class="dropdown-content">
+                <li><a href="#inprogress" id="inprogress">In Progress</a></li>
+              </ul>
+            </li>
+            <li><a href="#workshops" id="workshops">Workshops</a></li>
+            <li><a href="#contact" id="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="pageContent">
+        <!-- Dynamic content will be loaded here -->
+      </main>
+      <footer>
+        <p>© Aurelius Noble</p>
+      </footer>
     </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
-

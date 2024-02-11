@@ -1,4 +1,6 @@
 - Set up for mobile (hamburger)
+- clickable through background
 - Add content
 - Add LSE logo
 - Add animations
+- max calculations
