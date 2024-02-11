@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="workshop-item">
                 <a href="https://rb.gy/aolnqw" target="_blank"><img src="network_anim.gif" alt="Neural Networks Image"></a>
                 <a href="https://rb.gy/aolnqw" target="_blank" class="workshop-title">Neural Networks: Building an Intuitive Understanding</a>
-                <p>These workshops are aimed at showing the intuition behind neural networks. They provide an interactive learning experience, where participants use basic mathematical building blocks to build machine learning models, from linear regression to simple artificial neural networks.</p>
+                <p>These workshops are aimed at showing the intuition behind neural networks. They provide an interactive learning experience, where participants use basic building blocks to build machine learning models, from linear regression to simple artificial neural networks.</p>
             </div>
             <!-- Repeat for more workshops -->
         </div>
