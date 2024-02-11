@@ -329,7 +329,41 @@ document.addEventListener('DOMContentLoaded', () => {
             </p>
         </div>
     </section>`,
-    inprogress: `<section><h2>Research</h2><p>Overview of research interests.</p></section>`,
+    inprogress: `
+    <section class="research-section">
+      <div class="research-item">
+        <div class="research-img">
+          <img src="aristocracy_graph.png" alt="Research Image 1">
+        </div>
+        <div class="research-content">
+          <h3><a href="paper_aristocracy.pdf" class="paper-link">The Persistence of the Aristocracy: Financial and Social Measures, England and Wales (1858-1907)</a></h3>
+          <p>This study challenges narratives of aristocratic decline between 1858 to 1907, showing the resilience of title-holders to globalisation, industrialisation, and democratisation. Constructing a novel dataset of 2.2 million wealth-holders and genealogical links, it shows that title-holder wealth and status were highly persistent, and adapted through marriages and new title grants. I show this through the construction of several new measures of: wealth persistence, social mobility and hereditary background.          </p>
+          <a href="paper_aristocracy.pdf" class="cv-link">Paper</a>
+        </div>
+      </div>
+      <hr>
+      <div class="research-item">
+        <div class="research-img">
+          <img src="research-img-2.jpeg" alt="Research Image 2">
+        </div>
+        <div class="research-content">
+          <h3><a href="link-to-paper-2" class="paper-link">Sub-title 2</a></h3>
+          <p>Description of the research interest 2. This research explores...</p>
+          <a href="link-to-paper-2" class="cv-link">Paper</a>
+        </div>
+      </div>
+      <hr>
+      <div class="research-item">
+        <div class="research-img">
+          <img src="research-img-3.jpeg" alt="Research Image 3">
+        </div>
+        <div class="research-content">
+          <h3><a href="link-to-paper-3" class="paper-link">Sub-title 3</a></h3>
+          <p>Description of the research interest 3. This study investigates...</p>
+          <a href="link-to-paper-3" class="cv-link">Paper</a>
+        </div>
+      </div>
+    </section>`,
     workshops: `
     <section class="workshops-section">
         <div class="workshops-container">

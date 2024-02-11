@@ -4,7 +4,8 @@ html {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  overflow-y: auto; /* Enables vertical scroll when needed */
   min-height: 100vh; /* Ensure the full viewport height */
 
   font-family: Arial, sans-serif;
@@ -161,6 +162,9 @@ main {
 }
 
 #pageContent {
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  overflow-y: auto; /* Enables vertical scroll when needed */
+  max-height: calc(100vh - 120px);
   background-color: rgba(230, 230, 230, 0.5); /* Grey translucent background */
   border-radius: 10px; /* Rounded corners */
   padding: 20px;
@@ -345,4 +349,93 @@ main {
   background-color: #007bff; /* Changes background on hover/focus */
   color: #ffffff; /* Changes text color on hover/focus */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover/focus */
+}
+
+.research-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between items */
+  font-family: 'Times New Roman', serif; /* Sets the font for the section */
+}
+
+.research-item {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Space between image and text */
+}
+
+.research-img img {
+  width: 400px; /* Adjust based on your needs */
+  height: 300px; /* Adjust to maintain aspect ratio */
+  object-fit: contain; /* Cover the area, may crop the image */
+  border-radius: 10px; /* Adds rounded corners to the image */
+}
+
+.research-content {
+  flex-grow: 1;
+}
+
+.research-content h3 {
+  margin: 0;
+  padding: 10px; /* Adds padding to make it look like a block */
+  background-color: transparent; /* Starts as transparent */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  cursor: pointer; /* Changes cursor to indicate clickable */
+}
+
+.research-content h3 a {
+  color: #000; /* Default text color */
+  text-decoration: none; /* Removes underline */
+}
+.research-content h3:hover,
+.research-content h3:focus {
+  background-color: #f2f2f2; /* Light grey background on hover */
+}
+
+.research-content h3 a {
+  color: #000; /* Initial color for the subtitle */
+  text-decoration: none; /* Removes underline */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Hover effect for the subtitle link */
+.research-content h3 a:hover,
+.research-content h3 a:focus {
+  color: #757575; /* Grey color on hover/focus */
+  text-decoration: none; /* Ensures no underline on hover/focus */
+}
+.research-content .cv-link {
+  background-color: #ffffff; /* White background */
+  color: #007bff; /* Inherits the blue color from link settings */
+  text-decoration: none; /* Removes underline */
+  padding: 8px 12px; /* Adds some padding around the text */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  font-family: 'Times New Roman', serif; /* Ensures Times New Roman font */
+}
+
+/* Adjusted styles for the 'Paper' link to match new specifications */
+.cv-link {
+  background-color: #ffffff; /* White background */
+  color: #007bff; /* Link color */
+  /* Other styles remain the same */
+}
+
+.cv-link:hover,
+.cv-link:focus {
+  background-color: #007bff; /* Changes background on hover/focus */
+  color: #ffffff; /* Changes text color on hover/focus */
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  ); /* Gradient line */
+  margin: 20px 0; /* Adds space around the <hr> */
 }
