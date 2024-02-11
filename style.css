@@ -149,9 +149,35 @@ main {
     background-color: rgba(235, 235, 235, 0.5); /* Grey translucent background */
     border-radius: 10px; /* Rounded corners */
     padding: 20px;
-    max-width: 70%; /* Adjust based on your preference */
+    max-width: 600px; /* Adjusted to make the window narrower */
     margin: 20px auto; /* Horizontally centers the window */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
     transition: opacity 0.5s ease-in-out; /* Smooth transition for the opacity */
     opacity: 0; /* Start with the element invisible for animation */
+}
+
+.about-section {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Adds some space between the image and text */
+    padding: 20px;
+    /* No max-width here to allow it to fill the parent container */
+}
+
+.about-img img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 400px; /* Adjust based on your preference */
+    border-radius: 10px; /* Optional: adds rounded corners to the image */
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-img, .about-text {
+        max-width: 100%;
+        text-align: center; /* Center the text for smaller screens */
+    }
 }

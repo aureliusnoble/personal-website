@@ -309,7 +309,16 @@ function updateSimulation() {
 document.addEventListener('DOMContentLoaded', () => {
     const pages = {
         home: `<section><h2>Welcome Home</h2><p>This is the homepage content.</p></section>`,
-        about: `<section><h2>About Us</h2><p>This is about Aurelius Noble.</p></section>`,
+    about: `
+    <section class="about-section">
+        <div class="about-img">
+            <img src="headshot.jpeg" alt="Headshot">
+        </div>
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>This is about Aurelius Noble.</p>
+        </div>
+    </section>`,
         research: `<section><h2>Research</h2><p>Overview of research interests.</p></section>`,
         teaching: `<section><h2>Teaching</h2><p>Teaching philosophy and courses.</p></section>`,
         workshops: `<section><h2>Workshops</h2><p>Upcoming workshops.</p></section>`,
