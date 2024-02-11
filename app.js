@@ -321,8 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </p>
         </div>
     </section>`,
-        research: `<section><h2>Research</h2><p>Overview of research interests.</p></section>`,
-        teaching: `<section><h2>Teaching</h2><p>Teaching philosophy and courses.</p></section>`,
+        inprogress: `<section><h2>Research</h2><p>Overview of research interests.</p></section>`,
         workshops: `<section><h2>Workshops</h2><p>Upcoming workshops.</p></section>`,
         contact: `<section><h2>Contact</h2><p>Contact information.</p></section>`
     };

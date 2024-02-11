@@ -68,6 +68,14 @@ nav ul li {
     padding-right:40px;
 }
 
+nav li {
+    text-decoration: none; /* Removes underline from links */
+    color: grey; /* Default color */
+    font-variant: small-caps; /* Small caps font */
+    font-size: 36px; /* Increase font size for bigger navigation links */
+
+}
+
 nav a {
     text-decoration: none; /* Removes underline from links */
     color: grey; /* Default color */
