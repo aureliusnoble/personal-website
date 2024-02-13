@@ -373,48 +373,29 @@ document.addEventListener('DOMContentLoaded', () => {
       <hr>
       <div class="research-item">
         <div class="research-img">
-          <img src="research-img-2.jpeg" alt="Research Image 2">
+          <img src="banks_graph.png" alt="Research Image 2">
         </div>
         <div class="research-content">
-          <h3><a href="link-to-paper-2" class="paper-link">Sub-title 2</a></h3>
-          <p>Description of the research interest 2. This research explores...</p>
-          <a href="link-to-paper-2" class="cv-link">Paper</a>
+          <h3><a href="paper_banks.pdf" class="paper-link">Business Among Friends: Personal Connections and Client Sharing in Merchant Banking, c. 1900</a></h3>
+          <p>This paper explores the crucial role of merchant banks in early 20th century London in facilitating short-term credit and mitigating information asymmetries across long distances. Through network analysis and a novel biographical dataset of 164 bankers, it investigates the prevalence of 'relationship banking' and client sharing among banks. The findings reveal that borrowers often engaged with multiple banks, a practice tied to personal relationships between bankers, suggesting a collaborative network that influenced credit access. This study highlights the impact of personal connections on the international capital market.</p>
+          <a href="paper_banks.pdf" class="cv-link">Paper</a>
         </div>
       </div>
     
       <hr>
       <div class="research-item">
         <div class="research-img">
-          <img src="research-img-3.jpeg" alt="Research Image 3">
+          <img src="tsa_graph.png" alt="Research Image 3">
         </div>
         <div class="research-content">
-          <h3><a href="link-to-paper-3" class="paper-link">Sub-title 3</a></h3>
-          <p>Description of the research interest 3. This study investigates...</p>
-          <a href="link-to-paper-3" class="cv-link">Paper</a>
+          <h3><a  class="paper-link">A Testament to Revolution? The Nobility and Wealth Mobility in France, 1790-1870</a></h3>
+              <p><em>with Noah Sutter</em></p> <!-- Added italicized text here -->
+
+          <p>This project looks at the persistence of the French nobility. The Revolution constituted a clear, violent break from the past. Yet, there has been little quantitative examination of how this affected the nobility. Why rose to take their place? In what institutions and organisations did they persist? Was decline related directly to the confiscation of assets? We aim to digitise the <em>tables des successions et absences</em>, and through this provide new estimates of social mobility and class based inequalities.</p>
+
         </div>
       </div>
-      <hr>
-      <div class="research-item">
-        <div class="research-img">
-          <img src="research-img-3.jpeg" alt="Research Image 3">
-        </div>
-        <div class="research-content">
-          <h3><a href="link-to-paper-3" class="paper-link">Sub-title 3</a></h3>
-          <p>Description of the research interest 3. This study investigates...</p>
-          <a href="link-to-paper-3" class="cv-link">Paper</a>
-        </div>
-      </div>
-      <hr>
-      <div class="research-item">
-        <div class="research-img">
-          <img src="research-img-3.jpeg" alt="Research Image 3">
-        </div>
-        <div class="research-content">
-          <h3><a href="link-to-paper-3" class="paper-link">Sub-title 3</a></h3>
-          <p>Description of the research interest 3. This study investigates...</p>
-          <a href="link-to-paper-3" class="cv-link">Paper</a>
-        </div>
-      </div>
+   
     </section>`,
     workshops: `
     <section class="workshops-section">
