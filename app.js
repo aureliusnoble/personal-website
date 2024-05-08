@@ -398,29 +398,22 @@ document.addEventListener('DOMContentLoaded', () => {
    
     </section>`,
     workshops: `
-<section class="workshops-section">
-    <div class="workshops-container">
-        <!-- Automated Transcription Workshop with Part I and Part II -->
-        <div class="workshop-item">
-            <a href="https://rb.gy/ndqx84" target="_blank">
-                <img src="cv_anim.gif" alt="Automated Transcription Image">
-            </a>
-            <div class="workshop-titles">
-                <a href="https://rb.gy/ndqx84" target="_blank" class="workshop-title">Automated Transcription: Part I</a>
-                <a href="https://rb.gy/iiq6kx" target="_blank" class="workshop-title">Automated Transcription: Part II</a>
+    <section class="workshops-section">
+        <div class="workshops-container">
+            <div class="workshop-item">
+                <a href="https://rb.gy/ndqx84" target="_blank"><img src="cv_anim.gif" alt="Automated Transcription Image"></a>
+                <a href="https://rb.gy/ndqx84" target="_blank" class="workshop-title">Automated Transcription for Economic History</a>
+                <p>These workshops provide a basic introduction to automated transcription for economic history. They are aimed at historical researchers, with no technical expertise, and aim to provide a practical hands-on introduction to both rules-based and deep learning techniques.</p>
             </div>
-            <p>These workshops provide a basic introduction to automated transcription for economic history. They are aimed at historical researchers, with no technical expertise, and aim to provide a practical hands-on introduction to both rules-based and deep learning techniques.</p>
+            <div class="workshop-item">
+                <a href="https://rb.gy/aolnqw" target="_blank"><img src="network_anim.gif" alt="Neural Networks Image"></a>
+                <a href="https://rb.gy/aolnqw" target="_blank" class="workshop-title">Neural Networks: Building an Intuitive Understanding</a>
+                <p>These workshops are aimed at showing the intuition behind neural networks. They provide an interactive learning experience, where participants use basic building blocks to build machine learning models, from linear regression to simple artificial neural networks.</p>
+            </div>
+            <!-- Repeat for more workshops -->
         </div>
-        <!-- Neural Networks Workshop -->
-        <div class="workshop-item">
-            <a href="https://rb.gy/aolnqw" target="_blank">
-                <img src="network_anim.gif" alt="Neural Networks Image">
-            </a>
-            <a href="https://rb.gy/aolnqw" target="_blank" class="workshop-title">Neural Networks: Building an Intuitive Understanding</a>
-            <p>These workshops are aimed at showing the intuition behind neural networks. They provide an interactive learning experience, where participants use basic building blocks to build machine learning models, from linear regression to simple artificial neural networks.</p>
-        </div>
-    </div>
-</section>,
+    </section>`,
+
 
     contact: `
     <section class="contact-section">
