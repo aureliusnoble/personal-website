@@ -349,9 +349,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="headshot2.png" alt="Headshot">
         </div>
         <div class="about-text">
-            <p>I am a PhD candidate in Economic History at the London School of Economics, supervised by Olivier Accominotti and Neil Cummins.<br><br>
+            <p>I am a PhD candidate in Economic History at the London School of Economics, supervised by Olivier Accominotti and Neil Cummins. I also work as a Research Engineer at Transkribus.<br><br>
             
-            My research looks at long-run wealth inequality, and the persistence of aristocratic elites, with a focus on 'Big Data' collection methods and network analysis.
+            My research looks at long-run wealth inequality, and the persistence of aristocratic elites, with a focus on 'Big Data' collection methods (automated transcription and natural language processing) and network analysis.
             <br><br>
             <a href="CV - Aurelius Noble - January 2024.pdf" target="_blank"class="cv-link">CV</a></p>
 
